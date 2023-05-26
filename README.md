@@ -10,8 +10,7 @@ Dockerfile is an image definition for Docker
   - In a command prompt, go to the directory cloned from github
   - Command : ```docker build -t dtm .```
     (dtm will be the name of the image)
-- Run a new Docker instance
-Comamnd : 
+- Run a new Docker instancewith the comamnd : 
 ```
 docker run --rm -p 0.0.0.0:6006:6006 -p 8888:8888 -v [DATA_DIR]:/home/student/data --gpus=all --name dtm dtm 
 ```
