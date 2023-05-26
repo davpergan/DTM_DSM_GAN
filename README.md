@@ -17,7 +17,7 @@ docker run --rm -p 0.0.0.0:6006:6006 -p 8888:8888 -v [DATA_DIR]:/home/student/da
 ## Download dataset and model checkpoints
 ### Datasets
 Create a new directory called "np_dataset", this directory will contain the datasets of DSMs and orthophotos used to extract DTMs. It contains also the DTMs used as supervision.<br>
-The structure of this directory used while making this project was that it itself contains 2 directories called "512" and "256" (in reference to the spatial dimensions of the rasters").<br>
+The structure of this directory used while making this project was that it itself contains 2 directories called "512" and "256" (in reference to the spatial dimensions of the rasters).<br>
 In these directories, the datasets were contained in directories called "train", "test" and "val" (in reference to their use)<br>
 The rasters used as input data for the neural networks are saved numpy ndarrays, named "[id].npy", where [id] is a number between 1 and the total number of items in the dataset. These input raster are of size (RES, RES, n_channels), where RES is either 256 or 512, and where 
 - n_channels = 1 if the raster contains only a DSM
