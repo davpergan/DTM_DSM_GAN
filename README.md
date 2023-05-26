@@ -14,6 +14,9 @@ Dockerfile is an image definition for Docker
 ```
 docker run --rm -p 0.0.0.0:6006:6006 -p 8888:8888 -v [DATA_DIR]:/home/student/data --gpus=all --name dtm dtm 
 ```
+[DATA_DIR] should be replaced with the path to the directory cloned from Github
+
+
 ## Download dataset and model checkpoints
 ### Datasets
 Create a new directory called "np_dataset", this directory will contain the datasets of DSMs and orthophotos used to extract DTMs. It contains also the DTMs used as supervision.<br>
