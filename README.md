@@ -24,10 +24,10 @@ The rasters used as input data for the neural networks are saved numpy ndarrays,
 - n_channels = 4 if the raster contains a DSM and an orthophotograph (the 1st channel is a float representing the DSM height and the 3 other channels are the RGB values)
 If these input raster have corresponding DTMs used as supervision, they have the same structure (numpy array with shape (RES,RES)), and are saved with the name "dtm_[id].npy", where [id] is the same number as the corresponding DSM raster
 
-The validation dataset used in the project can be downloaded at the url : https://zenodo.org/record/7971162. It should be stored in the directory "np_dataset/512/val/"
+The validation dataset used in the project can be downloaded at the url : https://zenodo.org/record/7971162. It should be stored in the directory "np_dataset/512/val/"<br>
 
-The datasets used in the project were sampled from the DSM, DTM and orthoplan of Brussels, available at https://datastore.brussels/web/urbis-download
-The way the tif images downloaded on the Urbis website were used to generate the numpy dataset is shown in the jupyter notebook Preprocessing.ipynb
+The datasets used in the project were sampled from the DSM, DTM and orthoplan of Brussels, available at https://datastore.brussels/web/urbis-download<br>
+The way the tif images downloaded on the Urbis website were used to generate the numpy dataset is shown in the jupyter notebook **Preprocessing.ipynb**
 
 ### Models
 A selection of the deep neural networks trained for DTM extraction was put online and can be downloaded. They should be stored in a directory called "training_checkpoints/[model_name]" where the model name is the name given below. 
@@ -37,16 +37,16 @@ A selection of the deep neural networks trained for DTM extraction was put onlin
 - gan_sem_map --> https://zenodo.org/record/7971961
 
 ## Generating DTMs
-The jupyter notebook "main.ipynb" shows how to use the different models to generate DTMs using DSM and/or orthophotographs.<br>
+The jupyter notebook "**main.ipynb**" shows how to use the different models to generate DTMs using DSM and/or orthophotographs.<br>
 It uses the dataset in directory "np_dataset/512/val", but any other dataset with the same structure can be used.
 
 ## Training a new model
-The notebooks containing the code used in the project to traing new models are train_GAN.ipynb, train_GAN(+sem_map)/ipynb (adapted for the training of the GAN using as input the DSM and the semantic map of the ground) and train_seg.ipynb<br>
+The notebooks containing the code used in the project to traing new models are **train_GAN.ipynb**, **train_GAN(+sem_map)/ipynb** (adapted for the training of the GAN using as input the DSM and the semantic map of the ground) and **train_seg.ipynb**<br>
 The code in these notebooks uses dataset in the form of tensorflow datasets, saved in the directory "tf_dataset/[set_type]_dataset_[RES]/", where [set_type] is either "train", "test" or "val" and [RES] is either "256" or "512". <br>
-A tensorlow dataset compatible with the code in these notebook can be generated from a numpy dataset with the same structure as the one from the section above, using the fucntion "make_tf_dataset" from the preprocessing_fcts.py file.
+A tensorlow dataset compatible with the code in these notebook can be generated from a numpy dataset with the same structure as the one from the section above, using the fucntion "make_tf_dataset" from the **preprocessing_fcts**.py file.
 
 ## Results visualisation and statistics
-The notebooks "visualize_gen.ipynb" and "visualize_seg.ipynb" contain the code used to visualize the results from trained neural networks, as well as measure their performance with diverse statistics
+The notebooks "**visualize_gen.ipynb**" and "**visualize_seg.ipynb**" contain the code used to visualize the results from trained neural networks, as well as measure their performance with diverse statistics
 
 ## Python files
 The following files contain functions used in the different jupyter notebooks : 
