@@ -41,7 +41,7 @@ The jupyter notebook "**main.ipynb**" shows how to use the different models to g
 It uses the dataset in directory "np_dataset/512/val", but any other dataset with the same structure can be used.
 
 ## Training a new model
-The notebooks containing the code used in the project to traing new models are **train_GAN.ipynb**, **train_GAN(+sem_map)/ipynb** (adapted for the training of the GAN using as input the DSM and the semantic map of the ground) and **train_seg.ipynb**<br>
+The notebooks containing the code used in the project to traing new models are **train_GAN.ipynb**, **train_GAN(+sem_map).ipynb** (adapted for the training of the GAN using as input the DSM and the semantic map of the ground) and **train_seg.ipynb**<br>
 The code in these notebooks uses dataset in the form of tensorflow datasets, saved in the directory "tf_dataset/[set_type]_dataset_[RES]/", where [set_type] is either "train", "test" or "val" and [RES] is either "256" or "512". <br>
 A tensorlow dataset compatible with the code in these notebook can be generated from a numpy dataset with the same structure as the one from the section above, using the fucntion "make_tf_dataset" from the **preprocessing_fcts**.py file.
 
