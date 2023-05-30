@@ -28,6 +28,10 @@ The rasters used as input data for the neural networks are saved numpy ndarrays,
 If these input raster have corresponding DTMs used as supervision, they have the same structure (numpy array with shape (RES,RES)), and are saved with the name "dtm_[id].npy", where [id] is the same number as the corresponding DSM raster
 
 The validation dataset used in the project can be downloaded at the url : https://zenodo.org/record/7971162. It should be stored in the directory "np_dataset/512/val/"<br>
+As zenodo enables to download files only 1 by 1, it can be convenient to download "zenodo_get" with the terminal command :<br> 
+```pip3 install zenodo_get``` <br>
+The dataset can be then downloaded with the command <br>
+```zenodo_get 7971162```
 
 The datasets used in the project were sampled from the DSM, DTM and orthoplan of Brussels, available at https://datastore.brussels/web/urbis-download<br>
 The way the tif images downloaded on the Urbis website were used to generate the numpy dataset is shown in the jupyter notebook **Preprocessing.ipynb**
