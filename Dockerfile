@@ -8,12 +8,14 @@ LABEL maintainer="david.perez@ulb.be"
 
 ARG DEBIAN_FRONTEND=noninteractive
 
+ENV NVIDIA_REQUIRE_CUDA "cuda=11.8"
+
 # Add user
 RUN useradd -ms /bin/bash student
 
 # Update & upgrade system
-RUN apt-get -y update && \
-    apt-get -y upgrade
+RUN apt-get update --fix-missing
+
 RUN apt-get install -y --no-install-recommends apt-utils
 
 # Setup locales
@@ -34,10 +36,10 @@ RUN apt-get install -y --no-install-recommends \
 	python3-pydot \
 	python3-pandas
 
-RUN apt-get -y update
 
 # Install Jupyterlab
 RUN pip install jupyterlab --use-feature=2020-resolver
+
 
 ENV JUPYTER_ENABLE_LAB=yes
 ENV PATH="$HOME/.local/bin:$PATH"
