@@ -1,5 +1,5 @@
 # DTM extraction from DSM using Generative Adversarial Networks
-This repository contains the code written in the context of a master thesis at the Université Libre de Bruxelles about the use of GANs for the generation of Digital Terrain Models (DTM) using Digital Terrain Models (DSM) and processed aerial photographs.
+This repository contains the code written in the context of a master thesis at the Université Libre de Bruxelles about the use of GANs for the generation of Digital Terrain Models (DTM) using Digital Surface Models (DSM) and processed aerial photographs.
 ## Contents
 This repository contains the jupyter notebooks, as well as python files used in the project. 
 Dockerfile is an image definition for Docker
